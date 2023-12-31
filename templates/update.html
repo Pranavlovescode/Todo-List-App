@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    
+<div class="container my-3">
+    <h2>Add a Todo</h2>
+    <form action="/update/{{element.serial_no}}" method="POST">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="title" class="form-control" id="title" value="{{element.title}}" aria-describedby="emailHelp" required>
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Description</label>
+            <input type="text" name="desc" class="form-control" id="desc" value="{{element.desc}}" required>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Update</button>
+    </form>
+    
+</div>
+{% endblock body %}
